@@ -8,10 +8,13 @@
 </head>
 <body>
     <h1>Etch-A-Sketch</h1>
-    <div id="size-picker">
-        <input type="range" min="1" max="100" value="50" class="slider" id="range">
-    </div>
-    <div id="container">
+    <div class="content-wrapper">
+        <div id="size-picker">
+            <input type="range" min="1" max="100" value="50" class="slider" id="range">
+            <div>Value: <span id="value"></span></div>
+        </div>
+        <div id="container">
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,9 +1,14 @@
 const container = document.getElementById('container');
-const sizeSlider = document.getElementById('slider');
+const sizeSlider = document.getElementById('range');
+const value = document.getElementById('value');
 
+value.textContent = sizeSlider.value;
 
+sizeSlider.oninput = function() {
+    value.textContent = this.value;
+}
 
-function createDivs(size) {
+function createGrid(size) {
     // create the dimensions of the container: createDivs(4) creates a 4x4 container
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -15,9 +20,11 @@ function createDivs(size) {
         container.appendChild(grid);
         
         grid.addEventListener('mouseover', () => {
-            grid.style.backgroundColor = 'red';
+            grid.style.backgroundColor = 'green';
         })
     }
 }
+
+createGrid(sizeSlider.value)
 
 
