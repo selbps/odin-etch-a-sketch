@@ -13,21 +13,16 @@ h1 {
 
 #container {
     padding: 50px;
-    display: flex;
-    flex-direction: column;
-    flex: auto;
-    flex-wrap: wrap;
+    display: grid;
+    min-height: 500px;
+    min-width: 500px;
     max-height: 500px;
     max-width: 500px;
 }
 
  .grid {
-    border: solid black 1px;
-    background-color: white;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    flex-wrap: nowrap;
+    border: solid rgb(0, 0, 0) 1px;
+    background-color: rgb(255, 255, 255);
  }
 
  .gridHover {

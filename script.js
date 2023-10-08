@@ -1,7 +1,11 @@
 const container = document.getElementById('container');
 
-for (let i = 0; i < 16; i++) {
-    for ( let j = 0; j < 16; j++) {
+function createDivs(size) {
+    // create the dimensions of the container: createDivs(4) creates a 4x4 container
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+
+    for (let i = 0; i < size * size; i++) {
         const grid = document.createElement('div');
         grid.classList.add('grid');
         
@@ -13,11 +17,3 @@ for (let i = 0; i < 16; i++) {
     }
 }
 
-
-// let createDivs = function (num) {
-//     for (i = 0; i <= num; i++) {
-//         if (i = 16) {
-//             return;
-//         }
-//     }
-// }
