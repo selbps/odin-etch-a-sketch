@@ -1,4 +1,7 @@
 const container = document.getElementById('container');
+const sizeSlider = document.getElementById('slider');
+
+
 
 function createDivs(size) {
     // create the dimensions of the container: createDivs(4) creates a 4x4 container
@@ -16,4 +19,5 @@ function createDivs(size) {
         })
     }
 }
+
 

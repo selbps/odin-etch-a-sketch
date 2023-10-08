@@ -28,3 +28,7 @@ h1 {
  .gridHover {
     background-color: blue;
  }
+
+ .slider {
+    width: 200px;
+ }
