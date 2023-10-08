@@ -6,13 +6,12 @@ for (let i = 0; i < 16; i++) {
         grid.classList.add('grid');
         
         container.appendChild(grid);
+        
+        grid.addEventListener('mouseover', () => {
+            grid.style.backgroundColor = 'red';
+        })
     }
 }
-
-
-
-
-
 
 
 // let createDivs = function (num) {
