@@ -9,11 +9,21 @@
 <body>
     <h1>Etch-A-Sketch</h1>
     <div class="content-wrapper">
-        <div id="size-picker">
-            <input type="range" min="1" max="99" value="50" class="slider" id="range">
-            <div>Value: <span id="value"></span></div>
+        <div class="content-wrapper-left">
+            <input type="color">
+            <button>Random Color</button>
+            <button>Darken</button>
+            <button>Clear</button>
+            <button>Eraser</button>
+            <div id="size-picker">
+                <div>Grid Size</div>
+                <input type="range" min="1" max="99" value="50" class="slider" id="range">
+                <div>Value: <span id="value"></span></div>
+            </div>
         </div>
-        <div id="container">
+        <div class="content-wrapper-right">
+            <div id="container">
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
