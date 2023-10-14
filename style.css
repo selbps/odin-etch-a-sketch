@@ -11,6 +11,30 @@ h1 {
     margin: 30px;
 }
 
+button {
+    min-height: 40px;
+    min-width: 120px;
+}
+
+.content-wrapper {
+    border: solid greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper-left {
+    border: solid maroon;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: auto;
+    gap: 30px;
+    padding: 50px;
+    font-size: larger;
+}
+
 #container {
     padding: 50px;
     display: grid;
@@ -31,4 +55,8 @@ h1 {
 
  .slider {
     width: 200px;
+ }
+
+ #size-picker {
+    text-align: center;
  }

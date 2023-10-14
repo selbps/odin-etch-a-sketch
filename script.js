@@ -34,4 +34,4 @@ function clearGrid() {
 
 }
 
-createGrid(16);
+createGrid(40);
