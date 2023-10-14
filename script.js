@@ -1,6 +1,7 @@
 const container = document.getElementById('container');
-const sizeSlider = document.getElementById('range');
-const value = document.getElementById('value');
+
+let sizeSlider = document.getElementById('range');
+let value = document.getElementById('value');
 
 value.textContent = sizeSlider.value;
 
@@ -25,6 +26,12 @@ function createGrid(size) {
     }
 }
 
-createGrid(sizeSlider.value)
+function restartGrid() {
+    sizeSlider.value === 0
+}
 
+function clearGrid() {
 
+}
+
+createGrid(16);
