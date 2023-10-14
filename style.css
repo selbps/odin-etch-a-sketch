@@ -1,4 +1,5 @@
 body {
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -16,20 +17,27 @@ a {
     color: black;
 }
 
+.color {
+    border: none;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+}
+
 button {
     min-height: 40px;
     min-width: 120px;
 }
 
 .content-wrapper {
-    border: solid greenyellow;
+    /* border: solid greenyellow; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .content-wrapper-left {
-    border: solid maroon;
+    /* border: solid maroon; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -26,17 +26,34 @@ function createGrid(size) {
         container.appendChild(grid);
         
         grid.addEventListener('mouseover', () => {
-            grid.style.backgroundColor = 'green';
+            grid.style.backgroundColor = colorPicker.value;
+        })
+
+        eraser.addEventListener('click', () => {
+            eraser.textContent = 'Draw';
+            grid.addEventListener('mouseover', () => {
+                grid.style.backgroundColor = 'white';
+            })
+            eraser.addEventListener('click', () => {
+                grid.addEventListener('mouseover', () => {
+                    grid.style.backgroundColor = colorPicker.value;
+                })
+                eraser.textContent = 'Eraser';
+            })
+        })
+
+        clear.addEventListener('click', () => {
+            grid.style.backgroundColor = 'white';
         })
     }
 }
 
 function restartGrid() {
-    sizeSlider.value === 0
+
 }
 
 function clearGrid() {
 
 }
 
-createGrid(40);
+createGrid(32);
