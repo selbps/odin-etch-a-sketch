@@ -11,7 +11,9 @@ let value = document.getElementById('value');
 value.textContent = sizeSlider.value;
 
 sizeSlider.oninput = function() {
+    container.innerHTML = '';
     value.textContent = this.value;
+    createGrid(value.textContent)
 }
 
 function createGrid(size) {
@@ -56,4 +58,4 @@ function clearGrid() {
 
 }
 
-createGrid(32);
+createGrid(16);
