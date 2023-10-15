@@ -28,6 +28,8 @@ a {
 button {
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
+    color: black;
+    border: solid black;
     min-height: 40px;
     min-width: 150px;
     background-color: white;
