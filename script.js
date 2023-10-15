@@ -1,6 +1,5 @@
 const container = document.getElementById('container');
 const randomColor = document.getElementById('random');
-const darkenColor = document.getElementById('darken');
 const clear = document.getElementById('clear');
 const eraser = document.getElementById('eraser');
 const colorPicker = document.getElementById('color-picker');
