@@ -31,6 +31,13 @@ function createGrid(size) {
             grid.style.backgroundColor = colorPicker.value;
         })
 
+        randomColor.addEventListener('click', () =>{
+                const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                grid.addEventListener('mouseover', () => {
+                    grid.style.backgroundColor = "#" + randomColor;
+                })
+            })
+
         eraser.addEventListener('click', () => {
             eraser.textContent = 'Draw';
             grid.addEventListener('mouseover', () => {
@@ -50,12 +57,13 @@ function createGrid(size) {
     }
 }
 
-function restartGrid() {
+function clearGrid() {
 
 }
 
-function clearGrid() {
-
+function random() {
+    let randomColor = "#" + ((1<<24) * Math.random()|0).toString(16);
+    return randomColor;
 }
 
 createGrid(16);
