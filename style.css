@@ -5,6 +5,7 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
+    height: 900;
 }
 
 h1 {
@@ -53,6 +54,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    flex: auto;
 }
 
 .content-wrapper-left {
@@ -68,7 +70,7 @@ button:hover {
 }
 
 #container {
-    padding: 50px;
+    padding: 30px;
     display: grid;
     min-height: 500px;
     min-width: 500px;
@@ -142,4 +144,6 @@ button:hover {
 
  .footer {
     font-size: large;
+    padding: 20px;
+    margin-top: 50px;
  }
