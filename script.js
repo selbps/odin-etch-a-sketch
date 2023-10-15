@@ -64,10 +64,6 @@ function createGrid(size) {
     }
 }
 
-function clearGrid() {
-
-}
-
 function random() {
     let randomColor = "#" + ((1<<24) * Math.random()|0).toString(16);
     return randomColor;
