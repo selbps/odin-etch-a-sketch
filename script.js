@@ -4,6 +4,7 @@ const darkenColor = document.getElementById('darken');
 const clear = document.getElementById('clear');
 const eraser = document.getElementById('eraser');
 const colorPicker = document.getElementById('color-picker');
+const reset = document.getElementById('reset');
 
 let sizeSlider = document.getElementById('range');
 let value = document.getElementById('value');
@@ -15,6 +16,13 @@ sizeSlider.oninput = function() {
     value.textContent = this.value;
     createGrid(value.textContent)
 }
+
+reset.addEventListener('click', () => {
+    container.innerHTML = '';
+    sizeSlider.value = 16;
+    value.textContent = sizeSlider.value;
+    createGrid(16);
+})
 
 function createGrid(size) {
     // create the dimensions of the container: createDivs(4) creates a 4x4 container
@@ -31,6 +39,12 @@ function createGrid(size) {
             grid.style.backgroundColor = colorPicker.value;
         })
 
+        colorPicker.addEventListener('click', () => {
+            grid.addEventListener('mouseover', () => {
+                grid.style.backgroundColor = colorPicker.value;
+            })
+        })
+
         randomColor.addEventListener('click', () =>{
                 const randomColor = Math.floor(Math.random()*16777215).toString(16);
                 grid.addEventListener('mouseover', () => {
@@ -39,15 +53,8 @@ function createGrid(size) {
             })
 
         eraser.addEventListener('click', () => {
-            eraser.textContent = 'Draw';
             grid.addEventListener('mouseover', () => {
                 grid.style.backgroundColor = 'white';
-            })
-            eraser.addEventListener('click', () => {
-                grid.addEventListener('mouseover', () => {
-                    grid.style.backgroundColor = colorPicker.value;
-                })
-                eraser.textContent = 'Eraser';
             })
         })
 
